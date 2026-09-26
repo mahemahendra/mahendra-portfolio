@@ -1,0 +1,17 @@
+# robots.txt for Mahendra S - Executive Architecture Portfolio
+# https://mahemahendra.github.io/mahendra-portfolio/
+
+User-agent: *
+Allow: /
+
+# Disallow development / internal template files
+Disallow: /starter-page.html
+Disallow: /PRD.md
+Disallow: /resume.txt
+Disallow: /forms/
+
+# Crawl delay (optional, standard 1s)
+Crawl-delay: 1
+
+# XML Sitemap
+Sitemap: https://mahemahendra.github.io/mahendra-portfolio/sitemap.xml

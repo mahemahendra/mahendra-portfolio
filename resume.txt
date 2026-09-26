@@ -1,0 +1,102 @@
++91 903-555-5335
++91 903-555-5331
+www.linkedin.com/in/mahee66
+mahendra.s@outlook.in
+MAHENDRA S
+PROFILE Highly qualified professional with 15 Years of IT experience in Requirement Analysis,
+Design and Development of web-based and enterprise applications.
+Possessing excellent programming skills summed up with strong knowledge in web designbased languages.
+Worked end to end from requirement gathering till post implementation phase with a good
+client facing exposure.
+Initiative-taking & Leadership skills, Multiple Hats, Initiative-taker, Presentation Skills,
+Collaborator with good Communication.
+TECHNICAL SKILLS Web Technologies
+React, Redux, Solidity, Smart Contracts, Ethereum Standard,
+JavaScript, Typescript, HTML5, CSS3, Ajax,
+OOP JS, ES6, NodeJS, RESTful API, HighCharts, React-native
+Database MySQL, fire-store, Cloud SQL
+Versioning Tools GIT & SVN
+Other JIRA, Confluence, Jenkins, Agile Methodology, Kanban
+Knowledge On Dart & Flutter, WebdriverIO JS, Kubernetes, AWS
+EXPERIENCE Engineer Management Master, HashedIn by Deloitte, 2022 -PRESENT
+▪ Working with the Project Manager on definition of development requirements and
+priorities.
+▪ Reviews project activities for compliance with procedures and standards
+▪ Leading team of 20+ and worked as Technical Architecture role
+
+TECHNICAL LEAD, INFINITE COMPUTER SYSTEMS, 2021 -2022
+▪ Collecting features from Clients and then converting into deliverables
+▪ Scrum plan and story creations in JIRA
+▪ Code Review and work as well Individual contributor
+SENIOR SOFTWARE ENGINEER, NETSCOUT SOFTWARE SYSTEMS, 2017 -2021
+NETSCOUT is well known for its network security analysis products. Helps,
+clients to detects attacks on their servers with detailed information.
+▪ Working closely with Product team and development team to ensure
+deliverables meet their timeline
+▪ Improved efficiency of development team by providing better
+Architecture
+▪ Contributing to technical strategy, policy, and procedure.
+SENIOR SOFTWARE ANALYST, NUVIZZ SOFTWARE SOLUTIONS, 2015-2017
+Nuvizz software solution is a Leading System Integrator with expertise in providing Supply
+Chain Management solutions. From real-time GPS ETAs to on-demand employment
+solutions to intuitive transportation dashboards, we achieve it with our advanced software,
+extensive logistics experience and supply chain mastery that no one else offers.
+▪ Acts as main point of contact between the UI team and the backend team.
+▪ Lead a small team of developers and Acted as a key resource for providing
+technical solutions.
+▪ Ensures that there are clear communication paths within the project team
+UI DEVELOPER, SAXON GLOBAL, 2014-2015
+UI DEVELOPER, COAXIAL WEB, 2012-2014
+PROJECTS HashedIn by Deloitte
+ClearCarbon: Carbon Assets Management platform, enterprise application
+Technologies: React, Java Sprint boot Microservices, OOP JS, ES6, HTML5, CSS3 (SCSS),
+RESTful API, GCP Cloud, Cloud SQL, ETL
+Infinite Computer Solutions
+TataSky MCR: Fault management and report generation tool
+TataSky Binge: OTT platform
+Technologies: React, Redux, OOP JS, ES6, HTML5, CSS3 (SCSS), RESTful API, W2Grid,
+Bootstrap
+NETSCOUT SOFTWARE SYSTEMS
+Cyber Investigator: Omnis™ Cyber Investigator is an enterprise-wide network threat and
+risk investigation platform that helps security teams easily detect, validate, investigate, and
+respond to threats. Reduce the impact of cyberthreats with an analytics system that also
+integrates with popular Security Information and Event Management (SIEM) platforms.
+Geo footprint tracking: The Geo Footprint, provides comprehensive network monitoring
+and data collection across Geo location. Helps, clients to focus/provide details on location
+where attacks are high.
+Technologies: React, Redux, OOP JS, ES6, HTML5, CSS3 (SCSS), RESTful API, HighCharts,
+W2Grid, Bootstrap, Flux, WebdriverIO JS
+NUVIZZ SOFTWARE SOLUTIONS
+nuDeliverit: This is an Advanced version of Deliverit product. Upgraded from JavaScript to
+React.
+Deliverit: This project contains Advanced Route Optimization, 100% Visibility: Up-to-theminute status updates, GPS track and trace and last mile management across your fleet and
+your contract carrier partners, Paperless Document Management: Fully customizable
+customer forms, email documents, and electronic signature capture – all instantly accessible
+and Work Offline: Store and forward documents for drivers to access online or offline.
+WorkLlama: Online logistic portal application for public crowd. Contains features such as
+Self-Service Onboarding: Easily create a crowd of credentialed resources; Allow users to
+download the app and create their own account.
+Technologies: React, OOP JS, ES6, HTML5, CSS3 (SCSS), RESTful API, Google Maps, Slick Grid,
+Bootstrap, AJAX, jQuery mobile. Webpack
+SAXON GLOBAL
+Finmax: Finmax Tech solution's multi-asset class, multi-currency software manages the
+processes associated with commissions, fees, soft$/CSA, and payout compensation
+management. Also, it provides insight into daily Commission Revenue, PNL, Transaction
+Costs & profitability.
+COAXIAL WEB
+Doordarshan:
+▪ Application for Doordarshan channel for internal use to transfer huge size of video files.
+▪It resumes videos while uploading/downloading time.
+▪It avoids their new agents to use third party tools or physical presence to submit their
+captured news/events to broadcast.
+Titan Eye+: Single page website developed using Angular JS for Titan Eye+ campaign
+purpose.
+Titan Store Locator: Single page mobile website developed using Angular JS for Titan Eye+
+show roam locator based on user current location.
+IndiGeo: Complete geophysical and GIS solutions to the mineral and groundwater
+exploration.
+EDUCATION POST GRADUATE CERTIFICATE IN BLOCKCHAIN TECHNOLOGY, IIM-NAGPUR
+BACHEL0R OF ENGINEER IN COMPUTER SCIENCE - 2012
+VISVESVARAYA TECHNOLOGICAL UNIVERSITY, BANGALORE
+PRE UNVERSITY-CERTIFICATE - 2008
+KARNATAKA STATE BOARD, BANGALORE

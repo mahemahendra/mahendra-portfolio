@@ -1,0 +1,27 @@
+{
+  "name": "Mahendra S | Senior Engineering Leader & Enterprise AI Architect",
+  "short_name": "Mahendra S",
+  "description": "Executive portfolio of Mahendra S: Enterprise GenAI, Distributed Cloud Architectures, and Engineering Pod Leadership.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1329",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

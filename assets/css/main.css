@@ -160,7 +160,8 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
+.header .logo h1,
+.header .logo .sitename {
   font-size: 32px;
   margin: 0;
   font-weight: 300;
@@ -661,7 +662,8 @@ section,
   position: relative;
 }
 
-.section-title h2 {
+.section-title h2,
+.section-title h1 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -669,7 +671,8 @@ section,
   position: relative;
 }
 
-.section-title h2:after {
+.section-title h2:after,
+.section-title h1:after {
   content: "";
   position: absolute;
   display: block;
@@ -705,7 +708,7 @@ section,
   }
 }
 
-.hero img {
+.hero img.hero-bg {
   position: absolute;
   inset: 0;
   display: block;
@@ -1420,4 +1423,329 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Executive Branding & Architecture Blueprint Additions
+--------------------------------------------------------------*/
+.hero-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-avatar-wrapper a {
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar-wrapper a:hover {
+  transform: scale(1.02);
+}
+
+.hero .hero-avatar {
+  position: relative !important;
+  inset: auto !important;
+  width: 270px !important;
+  height: 270px !important;
+  border-radius: 50% !important;
+  border: 4px solid #1e3a8a !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-avatar-wrapper a:hover .hero-avatar {
+  box-shadow: 0 14px 30px rgba(30, 58, 138, 0.22) !important;
+}
+
+.hero-exp-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 5;
+  transition: transform 0.25s ease;
+}
+
+.hero-exp-badge:hover {
+  transform: translateY(-2px);
+}
+
+.hero .hero-name {
+  color: #0f172a !important;
+  font-family: var(--default-font) !important;
+  font-weight: 700 !important;
+}
+
+.hero .hero-subheading {
+  color: #1e3a8a !important;
+  font-family: var(--default-font) !important;
+  font-weight: 600 !important;
+}
+
+.hero .hero-bio {
+  color: #475569 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  max-width: 720px;
+}
+
+.executive-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 50px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.executive-pill:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.btn-executive-primary {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+  border: 2px solid #1e3a8a !important;
+  padding: 12px 28px !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25) !important;
+}
+
+.btn-executive-primary:hover {
+  background-color: #172554 !important;
+  border-color: #172554 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35) !important;
+}
+
+.btn-executive-secondary {
+  background-color: transparent !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
+  padding: 12px 28px !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease !important;
+}
+
+.btn-executive-secondary:hover {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.2) !important;
+}
+
+.hero .btn-secondary-executive {
+  color: var(--heading-color) !important;
+  background: transparent !important;
+  border: 2px solid var(--accent-color);
+  padding: 10px 38px !important;
+  margin-left: 14px;
+}
+
+.hero .btn-secondary-executive:hover {
+  background: var(--accent-color) !important;
+  color: var(--contrast-color) !important;
+}
+
+.hero-subtitle {
+  max-width: 780px;
+  margin: 18px auto 0 auto !important;
+  font-size: 17px !important;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 15%) !important;
+}
+
+.typed {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: typedBlink 0.7s infinite;
+  color: var(--accent-color);
+}
+
+@keyframes typedBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Executive Architecture Blueprint Cards */
+.arch-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.arch-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 28px rgba(52, 183, 167, 0.15);
+}
+
+.arch-card-img-wrapper {
+  position: relative;
+  background: #181e24;
+  overflow: hidden;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.arch-card-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.arch-card:hover .arch-card-img-wrapper img {
+  transform: scale(1.02);
+}
+
+.arch-card-body {
+  padding: 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #238b7e;
+  background: rgba(52, 183, 167, 0.12);
+  border: 1px solid rgba(52, 183, 167, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.arch-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.arch-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.arch-card-title a:hover {
+  color: var(--accent-color);
+}
+
+.arch-card-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.arch-card-action {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.arch-card-action a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.arch-card-action a:hover {
+  color: #238b7e;
+  gap: 9px;
+}
+
+/* Executive Stats Box */
+.stats .stats-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.stats .stats-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+.stats .stats-item .stat-value {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  line-height: 1.1;
+  display: block;
+}
+
+.stats .stats-item p {
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-family: var(--heading-font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
 }
