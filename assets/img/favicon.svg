@@ -4,19 +4,19 @@
       <stop offset="0%" stop-color="#181e24"/>
       <stop offset="100%" stop-color="#0c1014"/>
     </linearGradient>
-    <linearGradient id="favTeal" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#34b7a7"/>
-      <stop offset="100%" stop-color="#1e9182"/>
+    <linearGradient id="favAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3156a5"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
     </linearGradient>
   </defs>
 
   <!-- Background Squircle -->
-  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="url(#favBg)" stroke="#34b7a7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="url(#favBg)" stroke="#1e3a8a" stroke-width="1.5" stroke-opacity="0.8"/>
 
   <!-- Architectural Geometric Monogram 'M' -->
-  <polygon points="13,47.5 13,20.5 20.5,20.5 32,35.5 43.5,20.5 51,20.5 51,47.5 44,47.5 44,29.5 34.5,41.5 29.5,41.5 20,29.5 20,47.5" fill="url(#favTeal)"/>
+  <polygon points="13,47.5 13,20.5 20.5,20.5 32,35.5 43.5,20.5 51,20.5 51,47.5 44,47.5 44,29.5 34.5,41.5 29.5,41.5 20,29.5 20,47.5" fill="url(#favAccent)"/>
 
   <!-- Tech Node Apex Indicator -->
   <circle cx="32" cy="13" r="3.2" fill="#ffffff"/>
-  <circle cx="32" cy="13" r="1.8" fill="#34b7a7"/>
+  <circle cx="32" cy="13" r="1.8" fill="#3156a5"/>
 </svg>
