@@ -55,11 +55,12 @@
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
-    .then(response => {
+    .then(async response => {
+      const responseText = await response.text();
       if( response.ok ) {
-        return response.text();
+        return responseText;
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        throw new Error(responseText.trim() || `${response.status} ${response.statusText}`); 
       }
     })
     .then(data => {
@@ -78,7 +79,32 @@
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    let message = (error instanceof Error) ? error.message : String(error);
+
+    // If server mail is unconfigured or static host returns 405 Method Not Allowed / 404,
+    // provide an executive 1-click mailto fallback with the form data pre-populated
+    const isServerUnavailable = message.includes('405') ||
+                                message.includes('Method Not Allowed') ||
+                                message.includes('404') ||
+                                message.includes('Failed to fetch') ||
+                                message.includes('NetworkError') ||
+                                message.includes('mail server') ||
+                                message.includes('mail service');
+
+    if (isServerUnavailable) {
+      const subjectInput = thisForm.querySelector('[name="subject"]');
+      const messageInput = thisForm.querySelector('[name="message"]');
+      const nameInput = thisForm.querySelector('[name="name"]');
+      const emailInput = thisForm.querySelector('[name="email"]');
+
+      const subject = encodeURIComponent(subjectInput ? subjectInput.value : 'Executive Inquiry');
+      const bodyText = `Name: ${nameInput ? nameInput.value : ''}\nEmail: ${emailInput ? emailInput.value : ''}\n\nMessage:\n${messageInput ? messageInput.value : ''}`;
+      const mailtoUrl = `mailto:mahendra.s@outlook.in?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+
+      message = `Server mail processing is not configured on this host. <a href="${mailtoUrl}" class="text-white text-decoration-underline fw-bold" style="word-break: break-word;">Click here to email mahendra.s@outlook.in directly</a> with your inquiry details.`;
+    }
+
+    thisForm.querySelector('.error-message').innerHTML = message;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 
