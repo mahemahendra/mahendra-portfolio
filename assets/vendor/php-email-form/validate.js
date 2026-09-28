@@ -50,26 +50,59 @@
   });
 
   function php_email_form_submit(thisForm, action, formData) {
+    // If a subject was entered, synchronize it with FormSubmit's _subject hidden field
+    const subjectField = thisForm.querySelector('#subject-field') || thisForm.querySelector('[name="subject"]');
+    const hiddenSubject = thisForm.querySelector('[name="_subject"]');
+    if (subjectField && hiddenSubject && subjectField.value.trim() !== '') {
+      hiddenSubject.value = `[Portfolio Inquiry] ${subjectField.value.trim()}`;
+      formData.set('_subject', hiddenSubject.value);
+    }
+
     fetch(action, {
       method: 'POST',
       body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      headers: {
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
     })
     .then(async response => {
-      const responseText = await response.text();
-      if( response.ok ) {
-        return responseText;
+      const contentType = response.headers.get('content-type') || '';
+      let data;
+      if (contentType.includes('application/json')) {
+        data = await response.json();
       } else {
-        throw new Error(responseText.trim() || `${response.status} ${response.statusText}`); 
+        const text = await response.text();
+        try {
+          data = JSON.parse(text);
+        } catch {
+          data = text;
+        }
       }
+
+      if (!response.ok) {
+        let errorMsg = (data && data.message) ? data.message : (typeof data === 'string' && data.trim()) ? data.trim() : `${response.status} ${response.statusText}`;
+        throw new Error(errorMsg);
+      }
+      return data;
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+
+      // Check for success across FormSubmit JSON and standard 'OK' text responses
+      const isSuccess = (typeof data === 'object' && data !== null && (data.success === 'true' || data.success === true)) ||
+                        (typeof data === 'string' && data.trim() === 'OK');
+
+      if (isSuccess) {
+        thisForm.querySelector('.sent-message').innerHTML = 'Your message has been sent successfully. Thank you for reaching out!';
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        let message = (data && data.message) ? data.message : (typeof data === 'string' ? data : 'Form submission failed.');
+        if (message.toLowerCase().includes('activate') || message.toLowerCase().includes('activation')) {
+          message = '<strong>Form activation required:</strong> A one-time activation email has been sent to <strong>mahendra.s@outlook.in</strong>. Please check your inbox and click the activation link to start receiving inquiries.';
+        }
+        throw new Error(message); 
       }
     })
     .catch((error) => {
@@ -81,17 +114,9 @@
     thisForm.querySelector('.loading').classList.remove('d-block');
     let message = (error instanceof Error) ? error.message : String(error);
 
-    // If server mail is unconfigured or static host returns 405 Method Not Allowed / 404,
-    // provide an executive 1-click mailto fallback with the form data pre-populated
-    const isServerUnavailable = message.includes('405') ||
-                                message.includes('Method Not Allowed') ||
-                                message.includes('404') ||
-                                message.includes('Failed to fetch') ||
-                                message.includes('NetworkError') ||
-                                message.includes('mail server') ||
-                                message.includes('mail service');
+    const isActivationNotice = message.includes('activation email has been sent');
 
-    if (isServerUnavailable) {
+    if (!isActivationNotice) {
       const subjectInput = thisForm.querySelector('[name="subject"]');
       const messageInput = thisForm.querySelector('[name="message"]');
       const nameInput = thisForm.querySelector('[name="name"]');
@@ -101,7 +126,7 @@
       const bodyText = `Name: ${nameInput ? nameInput.value : ''}\nEmail: ${emailInput ? emailInput.value : ''}\n\nMessage:\n${messageInput ? messageInput.value : ''}`;
       const mailtoUrl = `mailto:mahendra.s@outlook.in?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
 
-      message = `Server mail processing is not configured on this host. <a href="${mailtoUrl}" class="text-white text-decoration-underline fw-bold" style="word-break: break-word;">Click here to email mahendra.s@outlook.in directly</a> with your inquiry details.`;
+      message += `<div class="mt-2"><small>Direct contact: <a href="${mailtoUrl}" class="text-white text-decoration-underline fw-bold" style="word-break: break-word;">Click here to email mahendra.s@outlook.in</a></small></div>`;
     }
 
     thisForm.querySelector('.error-message').innerHTML = message;

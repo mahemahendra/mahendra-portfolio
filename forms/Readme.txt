@@ -1,19 +1,24 @@
 Executive Portfolio Contact Form Handler
 ========================================
 
-File: forms/contact.php
-Destination: mahendra.s@outlook.in
+Production Configuration:
+-------------------------
+The active contact form in `contact.html` is configured to use the FormSubmit.co serverless endpoint:
+  Endpoint: https://formsubmit.co/ajax/mahendra.s@outlook.in
 
-Features:
-- Native PHP (PHP 7.4+ and PHP 8.x compatible)
-- Zero proprietary dependencies (no BootstrapMade pro library required)
-- Full AJAX integration with assets/vendor/php-email-form/validate.js
-- Form sanitization and server-side validation
-- Anti-spam honeypot verification
-- Email Header Injection defense (CRLF filtering)
-- Clear executive submission formatting with metadata (IP, timestamp, user agent)
-- Direct reply-to routing
+Why this is ideal for the portfolio:
+- Works seamlessly on static web hosting (GitHub Pages, Netlify, Vercel) as well as local test servers.
+- Requires zero backend servers or SMTP daemon setup.
+- Delivers form submissions directly to mahendra.s@outlook.in.
+- Includes hidden anti-spam honeypot (_honey), customizable email subject (_subject), and clean table formatting (_template=table).
 
-Deployment Notes:
-- To deploy on a PHP server (Apache / Nginx / PHP-FPM), ensure PHP's mail() function is enabled or configure a local MTA (sendmail/postfix).
-- If deployed on a static host (such as GitHub Pages), the contact form in contact.html provides an instant one-click executive email fallback to mahendra.s@outlook.in.
+First-Time Activation:
+- When the very first message is submitted, FormSubmit sends a 1-click confirmation email to mahendra.s@outlook.in to activate the endpoint.
+- Once activated, all subsequent inquiries are delivered immediately to your inbox.
+
+Alternative Self-Hosted PHP Handler:
+-------------------------------------
+If you host this website on a dedicated PHP-enabled server (Apache/Nginx with sendmail/postfix), you can switch the form action in `contact.html` to:
+  action="forms/contact.php"
+
+The file `forms/contact.php` is fully standalone (PHP 7.4 - 8.3+), requires no proprietary libraries, validates input, prevents CRLF header injection, blocks bots via honeypot, and returns standard 'OK' responses.
